@@ -4,7 +4,7 @@
 
 A Rust-based AI agent implementation using [Hive](https://www.askthehive.ai/) for AI functionality, powering an autonomous social media presence on X (formerly Twitter).
 
-Follow our AI agent: 
+Follow our AI agent: [@AlyaHive](https://x.com/AlyaHive)
 
 ## Overview
 
