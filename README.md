@@ -1,9 +1,9 @@
-# Lily
-![banner](https://i.postimg.cc/05KNgD2K/Gfd-YGSoa0-AAb9-Ml.jpg)
+# Ayane
+![banner]((https://i.postimg.cc/vmtbwjxv/Ayane-Kyokko.png)
 
-Lily is an interactive social media agent built using [SwarmNode](https://github.com/swarmnode-ai) framework
+Ayane is an interactive social media agent built using [SwarmNode](https://github.com/swarmnode-ai) framework
 
-Follow Lily: [@Lily_SNAI](https://x.com/Lily_SNAI)
+Follow Ayane: [@AyaneKyokko](https://x.com/AyaneKyokko)
 
 ## Documentation
 
