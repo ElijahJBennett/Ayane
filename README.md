@@ -1,5 +1,5 @@
 # Ayane
-![banner](https://i.postimg.cc/vmtbwjxv/Ayane-Kyokko.png)
+![banner](https://i.postimg.cc/3RWbw9FP/9876.png)
 
 Ayane is an interactive social media agent built using [SwarmNode](https://github.com/swarmnode-ai) framework
 
