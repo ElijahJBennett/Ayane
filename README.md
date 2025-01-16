@@ -1,9 +1,9 @@
-# Ally
+# Lily
 ![banner](https://i.postimg.cc/05KNgD2K/Gfd-YGSoa0-AAb9-Ml.jpg)
 
 Dany is an interactive social media agent built using [SwarmNode](https://github.com/swarmnode-ai) framework
 
-Follow Dany: [@Ally_SNAI](https://x.com/Ally_SNAI)
+Follow Dany: [@Lily_SNAI](https://x.com/Lily_SNAI)
 
 ## Documentation
 
