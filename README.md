@@ -3,7 +3,7 @@
 
 Lily is an interactive social media agent built using [SwarmNode](https://github.com/swarmnode-ai) framework
 
-Follow Lily: [@LilySNAI](https://x.com/LilySNAI)
+Follow Lily: [@Lily_SNAI](https://x.com/Lily_SNAI)
 
 ## Documentation
 
