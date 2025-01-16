@@ -1,119 +1,82 @@
-# Alya
+# Jenna
+![banner](https://i.postimg.cc/05KNgD2K/Gfd-YGSoa0-AAb9-Ml.jpg)
 
-![banner](https://pbs.twimg.com/profile_banners/1871255582100914177/1736137457/1500x500)
+Jenna is an interactive social media agent built using [SwarmNode](https://github.com/swarmnode-ai) framework
 
-A Rust-based AI agent implementation using [Hive](https://www.askthehive.ai/) for AI functionality, powering an autonomous social media presence on X (formerly Twitter).
+Follow Jenna: [@JennaSNAI](https://x.com/JennaSNAI)
 
-Follow our AI agent: [@AlyaHive](https://x.com/AlyaHive)
+## Documentation
 
-## Overview
-
-Alya is a cutting-edge AI social media agent designed to autonomously engage with users, craft posts, and interact on platforms like X. Built in Rust for performance and reliability, Alya leverages the Hive framework to provide AI-driven functionality, ensuring natural conversation flow and a consistent, dynamic personality.
-
-## Key Features
-
-### Character-Based Design
-- Consistently expresses character traits through predefined attributes.
-- Configure unique voice and content preferences for diverse engagement.
-- Tailored replies based on the character's profile, creating an immersive experience.
-
-### Autonomous Interaction
-- Creates engaging, contextually relevant posts with oHiveinal content.
-- Reacts thoughtfully to mentions, interactions, and discussions.
-- Filters responses intelligently to ensure meaningful interactions.
-- Maintains fluid and authentic communication with users.
-
-### Advanced Memory System
-- Stores interaction history for personalized engagement over time.
-- Provides responses that acknowledge past conversations and interactions.
-- Monitors interactions with users, building relationships and adjusting behavior.
-
-### Platform Integration
-- Built-in rate limiting and scheduling
-- Random delays for natural posting patterns
-- Comprehensive Twitter API v2 integration
-
-### Modular Architecture
-- Clear division between core functionality and platform integrations.
-- Easily extend and modify character traits for diverse personalities.
-- Integrate additional services and functionalities.
-- Optimized for performance while handling large data sets.
-
-## Prerequisites
-
-- Rust (latest stable version)
-- API Keys:
-  - Anthropic Claude API access
-  - Twitter API v2 credentials (OAuth 1.0a)
+Full documentation of the SDK is available at [https://swarmnode.ai/docs/sdk/introduction](https://swarmnode.ai/docs/sdk/introduction). You may also want to check out the [REST API Reference](https://swarmnode.ai/docs/api/v1/introduction).
 
 ## Installation
 
-1. Clone the repository:
-git clone https://github.com/chakaboommm/Alya
-cd Alya
+You can install the SDK via `pip`:
 
-2. Create a `.env` file with required credentials:
-ANTHROPIC_API_KEY=your_api_key
-TWITTER_CONSUMER_KEY=your_key
-TWITTER_CONSUMER_SECRET=your_secret
-TWITTER_ACCESS_TOKEN=your_token
-TWITTER_ACCESS_TOKEN_SECRET=your_token_secret
-CHARACTER_NAME=your_character_name
-
-3. Configure your character:
-   - Create a new directory: `characters/{CHARACTER_NAME}/`
-   - Add character definition in `character.json`
-
-## Character Configuration
-
-Characters are defined using a structured JSON format:
-
-{
-  "instructions": {
-    "base": "Base character instructions",
-    "suffix": "Additional instructions"
-  },
-  "adjectives": ["trait1", "trait2"],
-  "bio": {
-    "headline": "Character headline",
-    "key_traits": ["trait1", "trait2"]
-  },
-  "lore": ["background1", "background2"],
-  "styles": ["style1", "style2"],
-  "topics": ["topic1", "topic2"],
-  "post_style_examples": ["example1", "example2"]
-}
+```bash
+pip install swarmnode
+```
 
 ## Usage
 
-Run the agent:
-cargo run
+Once installed, you can use it to make requests.
 
-## Project Structure
+### Create an Agent
 
-Alya/
-├── src/
-│   ├── core/           # Core agent functionality
-│   ├── characteristics/ # Character trait implementations
-│   ├── providers/      # External service integrations
-│   └── memory/         # Persistence layer
-├── characters/         # Character definitions
-└── tests/             # Test suite
+```python
+import swarmnode
 
-## Dependencies
+swarmnode.api_key = "YOUR_API_KEY"
 
-- [Hive](https://www.askthehive.ai/) - AI agent framework
-- `twitter-v2` - Twitter API client
-- `tokio` - Async runtime
-- `serde` - Serialization/deserialization
-- `anyhow` - Error handling
+agent = swarmnode.Agent.create(
+    name="My Agent",
+    script="def main(request, store):\n    return request.payload",
+    requirements="requests==2.31.0\npandas==2.1.4",
+    env_vars="FOO=bar\nBAZ=qux",
+    python_version="3.11",
+    store_id="b553e996-6556-42dd-8990-ddb7ef2142f6",
+)
+```
 
+### Execute an Agent
 
-## Acknowledgments
+```python
+import swarmnode
 
-- [Hive](https://www.askthehive.ai/) team for the AI agent framework
-- Contributors and maintainers
+swarmnode.api_key = "YOUR_API_KEY"
 
-## Support
+agent = swarmnode.Agent.retrieve(id="15d19ca3-26f1-4adb-9cea-3955b73d9b4e")
 
-For questions and support, please open an issue in the GitHub repository.
+execution = agent.execute(payload={"key": "value"})
+```
+
+### Create a Cron Job
+
+```python
+import swarmnode
+
+swarmnode.api_key = "YOUR_API_KEY"
+
+cron_job = swarmnode.AgentExecutorCronJob.create(
+    agent_id="15d19ca3-26f1-4adb-9cea-3955b73d9b4e",
+    name="My cron job",
+    expression="* * * * *",
+)
+```
+
+### Stream Executions from a Cron Job
+
+```python
+import swarmnode
+
+swarmnode.api_key = "YOUR_API_KEY"
+
+cron_job = swarmnode.AgentExecutorCronJob.retrieve(id="f3384d13-7a32-4abe-9c10-964ca17413b7")
+
+for execution in cron_job.stream():
+    # Every time a new execution is created, it will be printed.
+    print(execution)
+```
+
+These are only a few examples of what you can do with the SDK. Refer to the [full documentation](https://swarmnode.ai/docs/sdk/introduction) to learn more about the SDK.
+
