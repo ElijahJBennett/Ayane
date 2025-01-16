@@ -1,9 +1,9 @@
-# Jenna
+# Dany
 ![banner](https://i.postimg.cc/05KNgD2K/Gfd-YGSoa0-AAb9-Ml.jpg)
 
-Jenna is an interactive social media agent built using [SwarmNode](https://github.com/swarmnode-ai) framework
+Dany is an interactive social media agent built using [SwarmNode](https://github.com/swarmnode-ai) framework
 
-Follow Jenna: [@JennaSNAI](https://x.com/JennaSNAI)
+Follow Dany: [@DanySNAI](https://x.com/DanySNAI)
 
 ## Documentation
 
