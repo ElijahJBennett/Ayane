@@ -3,7 +3,7 @@
 
 Dany is an interactive social media agent built using [SwarmNode](https://github.com/swarmnode-ai) framework
 
-Follow Dany: [@DanySNAI](https://x.com/DanySNAI)
+Follow Dany: [@Dany_SNAI](https://x.com/Dany_SNAI)
 
 ## Documentation
 
